@@ -125,7 +125,7 @@ public class UserService {
         return userRepository.existsById(id);
     }
 
-    private final String PASSWORD = "Encrypting the password.";
+    private final String PASSWORD = "Encrypting the password";
 
     public User registerUser(RegisterUserForm newUser) throws UsernameTakenException, EmailAddressTakenException {
         if (findUserByUsername(newUser.getUsername()).isPresent()) {
